@@ -1,0 +1,12 @@
+﻿2022-02-23 14:50:46.4931|INFO|Program|App Start | GC_CollectionMode = Default
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassB|Static constructor invoked
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassB|Default constructor invoked for Object id: 1
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassA|Static constructor invoked
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassA|Default constructor invoked by Object id: 1
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassA|Default constructor invoked by Object id: 2
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassA|Default constructor invoked by Object id: 3
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassA|Destructor invoked for Object id: 2
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassA|Destructor invoked for Object id: 3
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassA|Destructor invoked for Object id: 1
+2022-02-23 14:50:46.5247|INFO|Program|App Close
+2022-02-23 14:50:46.5247|INFO|GC_Test_App.ClassB|Destructor invoked for Object id: 1
