@@ -6,14 +6,20 @@ logger.Info("App Start | GC_CollectionMode = Optimized");
 Console.Title = "GC Test App";
 Console.WriteLine("==========Garbage Collector Test==========");
 
+Thread appClose = new Thread(() => Test.CollectOnKeyPress());
+Thread gcCheck = new Thread(() => Test.CheckMemoryStatus());
+
+// Will Force GC.Collect on key press from use
+appClose.Start();
+
 Test.Start();
 
-GC.Collect(2, GCCollectionMode.Default);
+GC.Collect(2, GCCollectionMode.Optimized);
 
-// Wait untill all destructor for all the object memory is called
-while (ClassA.count > 0 || ClassB.count > 0) ;
+gcCheck.Start();
+
+while (gcCheck.IsAlive) ;
 
 logger.Info("App Close");
 
-Console.WriteLine("Program completed! check 'GC log.txt' file");
-Console.ReadKey();
+Thread.Sleep(1000);

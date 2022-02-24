@@ -37,15 +37,4 @@ public class ClassB
         logger.Info($"Destructor invoked for Object id: {id}");
         Console.WriteLine($"ClassB destructor invoked for Object id: {id}");
     }
-
-    /// <summary>
-    /// Object reference is set to null
-    /// </summary>
-    public void DeReference()
-    {
-        int id = objectA.id;
-        objectA = null;
-        logger.Info($"Object memory id: {id} is dereferenced");
-        Console.WriteLine($"Temporary ClassA Object memory id: {id} is dereferenced");
-    }
 }
